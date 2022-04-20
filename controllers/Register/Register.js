@@ -48,10 +48,10 @@ exports.create = (req, res, next) => {
 
 
 exports.getCid = (req, res, next) => {
-    let cid = req.params.cid
+    let userid = req.params.userid
     req.getConnection((err, connection) => {
         if (err) return next(err)
-        var sql = `SELECT * FROM diligent_queue_register  where cid = '${cid}'  `;
+        var sql = `SELECT * FROM diligent_queue_register  where user_id = '${userid}'  `;
         // var params = "%" + req.query.term + "%"
         connection.query(sql, (err, results) => {
             if (err) return next(err)

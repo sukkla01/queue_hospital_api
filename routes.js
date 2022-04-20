@@ -23,7 +23,7 @@ module.exports = function (app) {
 
 
     app.post('/add-register',Register.create)
-    app.get('/get-register-cid/:cid',Register.getCid)
+    app.get('/get-register-cid/:userid',Register.getCid)
    
 
 
