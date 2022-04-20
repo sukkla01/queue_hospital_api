@@ -14,15 +14,19 @@ const moment = require('moment')
 
 exports.create = (req, res, next) => {
     let { body } = req
-    console.log(body)
+    console.log(body.userId)
     let post = {
         cid: body.cid,
-        user_id: body.user_id,
+        user_id: body.userId,
         picture: body.picture,
         tel: body.tel,
+        line_name: body.line_name,
         d_update: moment().format('YYYY-MM-DD') + ' ' + moment().format('HH:mm:ss')
 
     }
+
+
+    console.log(post)
 
     req.getConnection(function (err, connection) {
 
