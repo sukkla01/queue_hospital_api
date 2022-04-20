@@ -14,7 +14,7 @@ const moment = require('moment')
 
 exports.create = (req, res, next) => {
     let { body } = req
-    
+    console.log(body)
     let post = {
         cid: body.cid,
         user_id: body.user_id,
